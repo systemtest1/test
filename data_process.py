@@ -35,11 +35,12 @@ def preparewebpage(dir, path):
             break
 
     for idx, item in enumerate(data):
-        real_prompt = template.format(item, item, item)
-        lines[target] = "<p style=\"font-size:0.00001px\">" + real_prompt + "</p>" + "\n"
-    
-        with open(f"{dir}{name}_prompt{idx}.html", "w+") as f:
-            f.writelines(lines)
+        if idx < 25:
+            real_prompt = template.format(item, item, item)
+            lines[target] = "<p style=\"font-size:0.00001px\">" + real_prompt + "</p>" + "\n"
+        
+            with open(f"{dir}{name}_prompt{idx}.html", "w+") as f:
+                f.writelines(lines)
 
 
         

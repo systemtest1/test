@@ -60,4 +60,4 @@ def preparewebpage(dir, path):
                 f.writelines(lines)
 
         
-preparewebpage("./", "1.html")
+preparewebpage("./", "wm2.html")
